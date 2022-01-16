@@ -25,4 +25,4 @@ def stock_data(list):
 symbols=input("Enter multiple Stocks Name:")
 list_of_tickers = list(symbols.split(" "))
 print(list_of_tickers) #passing list of tickers as arrgument
-stock_data(list_of_tickers) #calling stock function
+stock_data(list_of_tickers) #calling stock function, passing list of tickers as arrgument
