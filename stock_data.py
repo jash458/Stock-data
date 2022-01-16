@@ -7,7 +7,7 @@ import pandas as pd
 def stock_data(list): 
 
     #empty dictionary in which we are going to add data-value of different stocks.
-    dict_of_tickers={} #basically nested-dictionary
+    dict_of_tickers={} #basically we going to make it nested-dictionary
 
     for ticker in list:
         #fetching stock data from site
