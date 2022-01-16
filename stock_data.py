@@ -11,7 +11,9 @@ def stock_data(list):
 
     for ticker in list:
         #fetching stock data from site
-        ticker_data = yf.download(f"{ticker}.NS", start="2021-01-01", end="2021-03-01", rounding='True')
+        currentTime = datetime.now().strftime("%Y-%m-%d")
+        startTime=(datetime.now() - relativedelta(years=5)).strftime("%Y-%m-%d")
+        ticker_data = yf.download(f"{symbol}.NS", start=f"{startTime}", end=f"{currentTime}", rounding='True')               
         #converting data to dict.
         ticker_data = ticker_data.to_dict(orient='list')
         update_dict_of_tickers={f"{ticker}":ticker_data}
