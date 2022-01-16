@@ -19,7 +19,9 @@ def stock_data(list):
         dict_of_tickers.update(update_dict_of_tickers)
      
     #print(dict_of_tickers.keys())
-
+    
+    ticker_dataframe=pd.DataFrame(dict_of_tickers)
+    print(ticker_dataframe)
 
 #taking stock name from user
 symbols=input("Enter multiple Stocks Name:")
